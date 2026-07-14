@@ -25,7 +25,7 @@ def get_groq_client():
 
 def chat_completion(
     messages: list,
-    model: str = "llama3-8b-8192",
+    model: str = "llama-3.1-8b-instant",
     temperature: float = 0.7,
     max_tokens: int = 1024,
 ) -> str:
@@ -35,7 +35,7 @@ def chat_completion(
     Args:
         messages   : List of {"role": str, "content": str} dicts.
         model      : Groq model ID.  Use 'llama-3.3-70b-versatile' for complex
-                     reasoning; 'llama3-8b-8192' for fast real-time chat.
+                     reasoning; 'llama-3.1-8b-instant' for fast real-time chat.
         temperature: Sampling temperature (0 = deterministic, 1 = creative).
         max_tokens : Upper token limit for the response.
 
@@ -65,7 +65,7 @@ def chat_completion(
         if "invalid_api_key" in err or "authentication" in err:
             return "⚠️ **Invalid API key.** Check your GROQ_API_KEY in Streamlit Secrets."
         if "model_not_found" in err:
-            return f"⚠️ **Model not found.** Try switching to `llama3-8b-8192`. Error: {exc}"
+            return f"⚠️ **Model not found.** Try switching to `llama-3.1-8b-instant`. Error: {exc}"
         return f"⚠️ **AI error:** {exc}"
 
 
