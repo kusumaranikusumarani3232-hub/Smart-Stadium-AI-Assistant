@@ -37,24 +37,26 @@ docs/navigation.png	docs/report.png
 
 (Upload screenshots into a docs/ folder.)
 
-🏗️ System Architecture
-User
-   │
-   ▼
-Streamlit Web App
-   │
-   ├── Crowd Monitoring
-   ├── Analytics
-   ├── Navigation (NetworkX)
-   ├── Incident Reports
-   ├── Fan Assistant
-   └── Volunteer Assistant
-          │
-          ▼
-      Groq API (Llama Models)
-          │
-          ▼
- AI Decision Support & Responses
+## 🏗️ System Architecture
+
+```mermaid
+flowchart TD
+    A[User] --> B[Streamlit Web App]
+
+    B --> C[Crowd Monitoring]
+    B --> D[Navigation - NetworkX]
+    B --> E[Analytics Dashboard]
+    B --> F[Fan Assistant]
+    B --> G[Volunteer Assistant]
+    B --> H[Incident Report]
+
+    F --> I[Groq API - Llama Models]
+    G --> I
+    H --> I
+    C --> I
+
+    I --> J[AI Decision Support & Responses]
+```
 🧪 Testing
 
 After the improvements you made today, add this section:
