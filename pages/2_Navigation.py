@@ -38,14 +38,23 @@ display_labels = [label for _, label in node_options]
 st.markdown("### Route Planner")
 col_from, col_to, col_btn = st.columns([2, 2, 1])
 with col_from:
-    from_label = st.selectbox("📍 Start Location", display_labels, index=0, key="nav_from")
+    from_label = st.selectbox(
+        "📍 Start Location", display_labels, index=0, key="nav_from",
+        help="Select your current location inside the stadium",
+    )
 with col_to:
     # Default to a different node
     default_to_idx = min(15, len(display_labels) - 1)
-    to_label = st.selectbox("🎯 Destination", display_labels, index=default_to_idx, key="nav_to")
+    to_label = st.selectbox(
+        "🎯 Destination", display_labels, index=default_to_idx, key="nav_to",
+        help="Select where you want to go — the shortest walking route will be calculated",
+    )
 with col_btn:
     st.markdown("<div style='height:28px'></div>", unsafe_allow_html=True)
-    find_route = st.button("Find Route →", key="btn_find_route", use_container_width=True)
+    find_route = st.button(
+        "Find Route →", key="btn_find_route", use_container_width=True,
+        help="Calculate the shortest walking path between your selected locations",
+    )
 
 source_id = labels_to_id.get(from_label, "")
 target_id = labels_to_id.get(to_label, "")
@@ -211,3 +220,4 @@ info_card(
     "the route is computed in milliseconds entirely on the server.",
     "ℹ️", "#8b5cf6",
 )
+
