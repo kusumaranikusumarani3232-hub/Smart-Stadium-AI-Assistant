@@ -44,15 +44,18 @@ st.markdown("<br>", unsafe_allow_html=True)
 c1, c2, c3 = st.columns(3)
 with c1:
     role_filter = st.multiselect(
-        "Filter by Role", vol_df["role"].unique().tolist(), key="vol_role"
+        "Filter by Role", vol_df["role"].unique().tolist(), key="vol_role",
+        help="Select one or more volunteer roles to filter the roster",
     )
 with c2:
     zone_filter = st.multiselect(
-        "Filter by Zone", vol_df["zone"].unique().tolist(), key="vol_zone"
+        "Filter by Zone", vol_df["zone"].unique().tolist(), key="vol_zone",
+        help="Select one or more stadium zones to narrow results",
     )
 with c3:
     status_filter = st.multiselect(
-        "Filter by Status", vol_df["status"].unique().tolist(), key="vol_status"
+        "Filter by Status", vol_df["status"].unique().tolist(), key="vol_status",
+        help="Filter volunteers by their current duty status (e.g. On Duty, Standby)",
     )
 
 filtered = vol_df.copy()
