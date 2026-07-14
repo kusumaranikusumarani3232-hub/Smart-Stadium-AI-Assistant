@@ -22,7 +22,10 @@ page_header("Admin Panel", "Simulate crowd conditions and generate AI operationa
 
 # ── Sidebar controls ───────────────────────────────────────────────────────────
 st.sidebar.markdown("### ⚙️ Simulation Settings")
-noise = st.sidebar.slider("Background noise level", 0.0, 0.15, 0.05, 0.01, key="admin_noise")
+noise = st.sidebar.slider(
+    "Background noise level", 0.0, 0.15, 0.05, 0.01, key="admin_noise",
+    help="Controls random variation (±) added to each zone's base crowd density",
+)
 
 if st.sidebar.button("🔄 Reset to Default Densities", key="admin_reset"):
     for key in list(st.session_state.keys()):
@@ -209,3 +212,4 @@ Format with clear sections. Be specific, operational, and authoritative."""
             mime="text/plain",
             key="dl_alert",
         )
+
