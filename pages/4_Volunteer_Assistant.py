@@ -182,7 +182,7 @@ Be concise, professional, and supportive."""
 
     with st.chat_message("assistant"):
         with st.spinner("Thinking…"):
-            reply = chat_completion(api_msgs, model="llama3-8b-8192", max_tokens=512)
+            reply = chat_completion(api_msgs, model="llama-3.1-8b-instant", max_tokens=512)
         st.markdown(reply)
 
     st.session_state.vol_chat.append({"role": "assistant", "content": reply})
