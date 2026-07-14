@@ -39,6 +39,7 @@ docs/navigation.png	docs/report.png
 
 🏗️ System Architecture
 User
+
    │
    ▼
 Streamlit Web App
@@ -70,6 +71,7 @@ Tests cover:
 Run tests:
 
 pytest tests/ -v
+
 ♿ Accessibility
 
 Mention your improvements.
@@ -85,6 +87,7 @@ Accessibility enhancements include:
 ✔ Larger report fonts
 
 ✔ Better widget labels
+
 📈 Future Enhancements
 
 Instead of ending with the license, add:
@@ -95,6 +98,7 @@ Google Maps indoor navigation
 Multi-stadium management
 Emergency evacuation simulation
 Voice-enabled AI assistant
+
 👩‍💻 Author
 Kusumarani
 
