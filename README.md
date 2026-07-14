@@ -39,7 +39,6 @@ docs/navigation.png	docs/report.png
 
 🏗️ System Architecture
 User
-
    │
    ▼
 Streamlit Web App
