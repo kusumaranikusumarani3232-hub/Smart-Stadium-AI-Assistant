@@ -1,0 +1,51 @@
+incident_id,timestamp,zone_id,zone_name,type,severity,description,resolved
+INC-1000,2024-07-10 14:30,Z2,South Stand,Aggressive Behavior,Low,Aggressive Behavior reported at South Stand. Response team notified. Situation being monitored.,True
+INC-1001,2024-07-10 12:45,Z8,Food Court B,Equipment Failure,High,Equipment Failure reported at Food Court B. Response team notified. Situation being monitored.,True
+INC-1002,2024-07-12 03:30,Z4,West Stand,Unauthorized Access,Low,Unauthorized Access reported at West Stand. Response team notified. Situation being monitored.,True
+INC-1003,2024-07-10 19:45,Z2,South Stand,Crowd Crush Risk,Low,Crowd Crush Risk reported at South Stand. Response team notified. Situation being monitored.,True
+INC-1004,2024-07-10 13:00,Z3,East Stand,Unauthorized Access,High,Unauthorized Access reported at East Stand. Response team notified. Situation being monitored.,False
+INC-1005,2024-07-12 15:45,Z7,Food Court A,Slip / Fall,High,Slip / Fall reported at Food Court A. Response team notified. Situation being monitored.,True
+INC-1006,2024-07-12 03:45,Z4,West Stand,Equipment Failure,Low,Equipment Failure reported at West Stand. Response team notified. Situation being monitored.,True
+INC-1007,2024-07-13 18:45,Z11,Concourse L1 South,Aggressive Behavior,Low,Aggressive Behavior reported at Concourse L1 South. Response team notified. Situation being monitored.,False
+INC-1008,2024-07-14 08:15,Z2,South Stand,Slip / Fall,Medium,Slip / Fall reported at South Stand. Response team notified. Situation being monitored.,True
+INC-1009,2024-07-12 03:45,Z2,South Stand,Slip / Fall,Low,Slip / Fall reported at South Stand. Response team notified. Situation being monitored.,True
+INC-1010,2024-07-10 10:15,Z2,South Stand,Equipment Failure,Low,Equipment Failure reported at South Stand. Response team notified. Situation being monitored.,True
+INC-1011,2024-07-11 13:45,Z1,North Stand,Lost Child,Critical,Lost Child reported at North Stand. Response team notified. Situation being monitored.,True
+INC-1012,2024-07-13 16:15,Z11,Concourse L1 South,Unauthorized Access,Low,Unauthorized Access reported at Concourse L1 South. Response team notified. Situation being monitored.,True
+INC-1013,2024-07-12 08:45,Z1,North Stand,Crowd Crush Risk,Low,Crowd Crush Risk reported at North Stand. Response team notified. Situation being monitored.,True
+INC-1014,2024-07-11 16:30,Z7,Food Court A,Aggressive Behavior,Medium,Aggressive Behavior reported at Food Court A. Response team notified. Situation being monitored.,False
+INC-1015,2024-07-13 15:00,Z8,Food Court B,Medical Emergency,Low,Medical Emergency reported at Food Court B. Response team notified. Situation being monitored.,True
+INC-1016,2024-07-13 04:45,Z2,South Stand,Aggressive Behavior,Low,Aggressive Behavior reported at South Stand. Response team notified. Situation being monitored.,True
+INC-1017,2024-07-12 20:00,Z8,Food Court B,Aggressive Behavior,Low,Aggressive Behavior reported at Food Court B. Response team notified. Situation being monitored.,True
+INC-1018,2024-07-11 04:45,Z2,South Stand,Unauthorized Access,Low,Unauthorized Access reported at South Stand. Response team notified. Situation being monitored.,True
+INC-1019,2024-07-10 18:00,Z10,Concourse L1 North,Lost Child,Low,Lost Child reported at Concourse L1 North. Response team notified. Situation being monitored.,True
+INC-1020,2024-07-11 21:45,Z8,Food Court B,Unauthorized Access,Medium,Unauthorized Access reported at Food Court B. Response team notified. Situation being monitored.,True
+INC-1021,2024-07-10 23:15,Z10,Concourse L1 North,Aggressive Behavior,Low,Aggressive Behavior reported at Concourse L1 North. Response team notified. Situation being monitored.,False
+INC-1022,2024-07-13 21:00,Z8,Food Court B,Slip / Fall,High,Slip / Fall reported at Food Court B. Response team notified. Situation being monitored.,True
+INC-1023,2024-07-14 03:45,Z7,Food Court A,Aggressive Behavior,High,Aggressive Behavior reported at Food Court A. Response team notified. Situation being monitored.,False
+INC-1024,2024-07-13 02:30,Z3,East Stand,Equipment Failure,Medium,Equipment Failure reported at East Stand. Response team notified. Situation being monitored.,True
+INC-1025,2024-07-12 07:15,Z8,Food Court B,Medical Emergency,Low,Medical Emergency reported at Food Court B. Response team notified. Situation being monitored.,True
+INC-1026,2024-07-11 10:30,Z7,Food Court A,Aggressive Behavior,Low,Aggressive Behavior reported at Food Court A. Response team notified. Situation being monitored.,True
+INC-1027,2024-07-11 09:15,Z1,North Stand,Fire Alarm,Low,Fire Alarm reported at North Stand. Response team notified. Situation being monitored.,True
+INC-1028,2024-07-13 12:30,Z2,South Stand,Equipment Failure,Medium,Equipment Failure reported at South Stand. Response team notified. Situation being monitored.,False
+INC-1029,2024-07-13 04:15,Z11,Concourse L1 South,Slip / Fall,Medium,Slip / Fall reported at Concourse L1 South. Response team notified. Situation being monitored.,True
+INC-1030,2024-07-11 16:45,Z8,Food Court B,Aggressive Behavior,High,Aggressive Behavior reported at Food Court B. Response team notified. Situation being monitored.,True
+INC-1031,2024-07-11 00:00,Z11,Concourse L1 South,Equipment Failure,Medium,Equipment Failure reported at Concourse L1 South. Response team notified. Situation being monitored.,False
+INC-1032,2024-07-10 14:30,Z11,Concourse L1 South,Equipment Failure,Critical,Equipment Failure reported at Concourse L1 South. Response team notified. Situation being monitored.,True
+INC-1033,2024-07-12 00:30,Z4,West Stand,Slip / Fall,Low,Slip / Fall reported at West Stand. Response team notified. Situation being monitored.,True
+INC-1034,2024-07-11 07:45,Z1,North Stand,Aggressive Behavior,Low,Aggressive Behavior reported at North Stand. Response team notified. Situation being monitored.,True
+INC-1035,2024-07-11 06:45,Z8,Food Court B,Medical Emergency,High,Medical Emergency reported at Food Court B. Response team notified. Situation being monitored.,False
+INC-1036,2024-07-11 17:30,Z1,North Stand,Aggressive Behavior,Low,Aggressive Behavior reported at North Stand. Response team notified. Situation being monitored.,True
+INC-1037,2024-07-10 21:45,Z8,Food Court B,Fire Alarm,Medium,Fire Alarm reported at Food Court B. Response team notified. Situation being monitored.,True
+INC-1038,2024-07-12 16:30,Z4,West Stand,Slip / Fall,Medium,Slip / Fall reported at West Stand. Response team notified. Situation being monitored.,True
+INC-1039,2024-07-11 19:30,Z1,North Stand,Unauthorized Access,Low,Unauthorized Access reported at North Stand. Response team notified. Situation being monitored.,True
+INC-1040,2024-07-12 23:15,Z11,Concourse L1 South,Crowd Crush Risk,Medium,Crowd Crush Risk reported at Concourse L1 South. Response team notified. Situation being monitored.,True
+INC-1041,2024-07-12 01:30,Z4,West Stand,Crowd Crush Risk,Medium,Crowd Crush Risk reported at West Stand. Response team notified. Situation being monitored.,True
+INC-1042,2024-07-13 12:30,Z1,North Stand,Equipment Failure,Medium,Equipment Failure reported at North Stand. Response team notified. Situation being monitored.,True
+INC-1043,2024-07-10 16:30,Z7,Food Court A,Unauthorized Access,Critical,Unauthorized Access reported at Food Court A. Response team notified. Situation being monitored.,True
+INC-1044,2024-07-10 13:00,Z11,Concourse L1 South,Unauthorized Access,Low,Unauthorized Access reported at Concourse L1 South. Response team notified. Situation being monitored.,True
+INC-1045,2024-07-11 05:15,Z7,Food Court A,Slip / Fall,High,Slip / Fall reported at Food Court A. Response team notified. Situation being monitored.,True
+INC-1046,2024-07-11 20:00,Z2,South Stand,Slip / Fall,Medium,Slip / Fall reported at South Stand. Response team notified. Situation being monitored.,True
+INC-1047,2024-07-11 08:00,Z10,Concourse L1 North,Aggressive Behavior,High,Aggressive Behavior reported at Concourse L1 North. Response team notified. Situation being monitored.,True
+INC-1048,2024-07-10 15:45,Z10,Concourse L1 North,Equipment Failure,Low,Equipment Failure reported at Concourse L1 North. Response team notified. Situation being monitored.,False
+INC-1049,2024-07-11 11:15,Z1,North Stand,Fire Alarm,High,Fire Alarm reported at North Stand. Response team notified. Situation being monitored.,False

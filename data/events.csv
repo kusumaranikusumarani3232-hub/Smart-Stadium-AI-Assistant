@@ -1,0 +1,16 @@
+event_id,match_name,teams,date,time,zones,expected_attendance,status
+EVT001,Group Stage – Match 1,India vs Australia,2024-07-14,09:00,"Z1,Z3",28000,Completed
+EVT002,Group Stage – Match 2,England vs New Zealand,2024-07-14,13:00,"Z2,Z4",25000,Completed
+EVT003,Group Stage – Match 3,Pakistan vs South Africa,2024-07-14,17:00,"Z1,Z2,Z3,Z4",32000,Live
+EVT004,Group Stage – Match 4,West Indies vs Sri Lanka,2024-07-15,09:30,"Z1,Z3",22000,Upcoming
+EVT005,Group Stage – Match 5,Bangladesh vs Afghanistan,2024-07-15,14:00,"Z2,Z4",20000,Upcoming
+EVT006,Quarter Final 1,India vs England,2024-07-17,14:00,"Z1,Z2,Z3,Z4",38000,Upcoming
+EVT007,Quarter Final 2,Australia vs Pakistan,2024-07-18,14:00,"Z1,Z2,Z3,Z4",36000,Upcoming
+EVT008,Semi Final 1,TBD vs TBD,2024-07-20,14:00,"Z1,Z2,Z3,Z4",40000,Upcoming
+EVT009,Semi Final 2,TBD vs TBD,2024-07-21,14:00,"Z1,Z2,Z3,Z4",40000,Upcoming
+EVT010,FINAL,TBD vs TBD,2024-07-23,16:00,"Z1,Z2,Z3,Z4",42000,Upcoming
+EVT011,Training Session,India Practice,2024-07-13,08:00,Z3,5000,Completed
+EVT012,Fan Meet & Greet,Fan Zone Event,2024-07-14,11:00,Z13,2000,Live
+EVT013,Press Conference,Post-Match Briefing,2024-07-14,20:00,Z6,200,Upcoming
+EVT014,Sponsor Activation,Brand Expo,2024-07-14,10:00,Z10,800,Live
+EVT015,Medical Briefing,Staff Health Update,2024-07-14,07:00,Z9,50,Completed
