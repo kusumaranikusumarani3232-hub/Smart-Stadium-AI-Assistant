@@ -131,7 +131,7 @@ Smart Stadium AI Assistant/
 
 Models used:
 - `llama-3.3-70b-versatile` — heavy reasoning (reports, decision support)
-- `llama3-8b-8192` — fast real-time chat (fan, volunteer)
+- `llama-3.1-8b-instant` — fast real-time chat (fan, volunteer)
 
 ---
 
@@ -159,3 +159,4 @@ No real personal data is used. CSVs are created automatically on first run and c
 ## 📜 License
 
 MIT — free to use, modify, and deploy for hackathons, demos, and production.
+
