@@ -127,7 +127,7 @@ if user_input:
         with st.spinner("Finding the best answer for you…"):
             reply = chat_completion(
                 api_msgs,
-                model="llama3-8b-8192",
+                model="llama-3.1-8b-instant",
                 temperature=0.75,
                 max_tokens=400,
             )
@@ -148,3 +148,4 @@ info_card(
     "♿ Accessible seating in all stands · 📶 Free Wi-Fi throughout the venue",
     "🏟️", "#f59e0b",
 )
+
