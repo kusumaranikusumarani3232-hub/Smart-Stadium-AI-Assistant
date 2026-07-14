@@ -87,7 +87,7 @@ section[data-testid="stSidebar"] > div:first-child { padding-top: 0.5rem; }
     box-shadow: 0 8px 24px rgba(0, 212, 255, 0.14);
 }
 [data-testid="stMetricLabel"] {
-    color: #94a3b8 !important;
+    color: #b0bec5 !important;  /* contrast fix: #94a3b8 → #b0bec5 (~4.6:1) */
     font-size: 0.75rem !important;
     text-transform: uppercase;
     letter-spacing: 0.07em;
@@ -162,7 +162,7 @@ details[data-testid="stExpander"] {
 
 /* ─── Tabs ──────────────────────────────────────────────────── */
 button[data-baseweb="tab"] {
-    color: #94a3b8 !important;
+    color: #b0bec5 !important;  /* contrast fix: #94a3b8 → #b0bec5 (~4.6:1) */
     font-weight: 500 !important;
     background: transparent !important;
 }
@@ -287,7 +287,7 @@ def info_card(
     border:1px solid #2d3748;border-left:3px solid {color};
     border-radius:12px;padding:1rem 1.2rem;margin:0.4rem 0;">
   <div style="font-weight:600;color:{color};margin-bottom:0.3rem;">{icon} {title}</div>
-  <div style="color:#94a3b8;font-size:0.88rem;line-height:1.65;">{content}</div>
+  <div style="color:#b0bec5;font-size:0.90rem;line-height:1.65;">{content}</div>
 </div>""", unsafe_allow_html=True)
 
 
@@ -361,3 +361,4 @@ def plotly_dark_layout(fig, title: str = "", height: int = 400) -> None:
         height=height,
         margin=dict(l=10, r=15, t=45 if title else 15, b=15),
     )
+
