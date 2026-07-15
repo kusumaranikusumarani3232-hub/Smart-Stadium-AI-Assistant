@@ -108,7 +108,7 @@ with tab1:
     )
     fig_role.update_traces(textposition="outside", textfont_color="#e2e8f0")
     plotly_dark_layout(fig_role, "Volunteers by Role", height=320)
-    st.plotly_chart(fig_role, use_container_width=True)
+    st.plotly_chart(fig_role, use_container_width=True, config={"displayModeBar": False})
 
 with tab2:
     status_counts = vol_df.groupby("status").size().reset_index(name="count")
@@ -123,7 +123,7 @@ with tab2:
         hole=0.55,
     )
     plotly_dark_layout(fig_status, "Volunteer Status Distribution", height=320)
-    st.plotly_chart(fig_status, use_container_width=True)
+    st.plotly_chart(fig_status, use_container_width=True, config={"displayModeBar": False})
 
 st.markdown("---")
 
