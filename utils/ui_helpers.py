@@ -159,6 +159,16 @@ details[data-testid="stExpander"] {
     border: 1px solid #2d3748 !important;
     background: #141929 !important;
 }
+[data-testid="stChatMessageContent"] p,
+[data-testid="stChatMessageContent"] li,
+[data-testid="stChatMessageContent"] h1,
+[data-testid="stChatMessageContent"] h2,
+[data-testid="stChatMessageContent"] h3,
+[data-testid="stChatMessageContent"] h4,
+[data-testid="stChatMessageContent"] h5,
+[data-testid="stChatMessageContent"] h6 {
+    color: #e2e8f0 !important;
+}
 
 /* ─── Chat input ────────────────────────────────────────────── */
 [data-testid="stChatInput"] {
@@ -378,3 +388,4 @@ def plotly_dark_layout(fig, title: str = "", height: int = 400) -> None:
         height=height,
         margin=dict(l=10, r=15, t=45 if title else 15, b=15),
     )
+
