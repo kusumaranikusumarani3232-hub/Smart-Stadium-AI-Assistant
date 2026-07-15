@@ -109,7 +109,7 @@ with tab1:
                   annotation_text="Critical (90%)", annotation_font_color="#dc2626")
     fig.update_xaxes(range=[0, 115])
     plotly_dark_layout(fig, "Current Zone Occupancy (%)", height=380)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
 with tab2:
     zone_opts = crowd_df["zone_name"].unique().tolist()
@@ -127,8 +127,8 @@ with tab2:
                        annotation_text="High Threshold")
         fig2.add_hline(y=90, line_dash="dot", line_color="#dc2626",
                        annotation_text="Critical Threshold")
-        plotly_dark_layout(fig2, height=400)
-        st.plotly_chart(fig2, use_container_width=True)
+        plotly_dark_layout(fig2, "Zone Density Over Time (%)", height=400)
+        st.plotly_chart(fig2, use_container_width=True, config={"displayModeBar": False})
     else:
         st.info("Select at least one zone above.")
 
@@ -166,7 +166,7 @@ with tab3:
     plotly_dark_layout(fig3, "Stadium Zone Density Map", height=460)
     fig3.update_xaxes(showgrid=False, showticklabels=False, title="")
     fig3.update_yaxes(showgrid=False, showticklabels=False, title="")
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3, use_container_width=True, config={"displayModeBar": False})
 
 st.markdown("---")
 
@@ -208,3 +208,4 @@ Be specific, practical, and concise. Use bullet points."""
                 max_tokens=900,
             )
         st.markdown(response)
+
