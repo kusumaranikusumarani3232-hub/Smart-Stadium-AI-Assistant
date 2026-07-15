@@ -126,7 +126,7 @@ fig.add_vline(x=75, line_dash="dot", line_color="#f59e0b", annotation_text="High
 fig.add_vline(x=90, line_dash="dot", line_color="#dc2626", annotation_text="Critical")
 fig.update_xaxes(range=[0, 115])
 plotly_dark_layout(fig, "Simulated Zone Density (%)", height=360)
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
 # Zone cards
 st.markdown("**Zone Breakdown**")
@@ -141,8 +141,11 @@ for idx, (_, row) in enumerate(sim_df.iterrows()):
   <div style="font-size:0.82rem;font-weight:600;color:#e2e8f0;margin-bottom:0.4rem;">
     {row['zone_name']}
   </div>
-  <div style="background:#0a0e1a;border-radius:99px;height:4px;margin-bottom:0.4rem;">
-    <div style="width:{min(row['density_pct'],100)}%;background:{color};height:4px;border-radius:99px;"></div>
+  <div style="background:#0a0e1a;border-radius:99px;height:4px;margin-bottom:0.4rem;"
+       role="progressbar"
+       aria-label="{row['zone_name']} density: {row['density_pct']:.1f}%"
+       aria-valuenow="{row['density_pct']:.0f}" aria-valuemin="0" aria-valuemax="100">
+    <div style="width:{min(row['density_pct'],100)}%;background:{color};height:4px;border-radius:99px;" aria-hidden="true"></div>
   </div>
   <div style="display:flex;justify-content:space-between;align-items:center;">
     <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:{color};font-size:1.1rem;">
