@@ -218,6 +218,44 @@ hr { border-color: #2d3748 !important; opacity: 0.5; }
     50%       { box-shadow: 0 0 20px rgba(0,212,255,0.65); }
 }
 .pulse { animation: pulse-glow 2s ease-in-out infinite; }
+
+/* ─── Focus Indicators (WCAG 2.4.7) ─────────────────────────── */
+/* Ensures every interactive control has a visible keyboard focus ring */
+[data-testid="stButton"] > button:focus-visible,
+[data-testid="stDownloadButton"] > button:focus-visible {
+    outline: 2px solid #00d4ff !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 4px rgba(0,212,255,0.30) !important;
+}
+[data-testid="stSidebarNav"] a:focus-visible {
+    outline: 2px solid #00d4ff !important;
+    outline-offset: 2px !important;
+    background: rgba(0,212,255,0.12) !important;
+}
+button[data-baseweb="tab"]:focus-visible {
+    outline: 2px solid #00d4ff !important;
+    outline-offset: 2px !important;
+    border-radius: 4px !important;
+}
+[data-testid="stSlider"] [role="slider"]:focus-visible {
+    outline: 2px solid #00d4ff !important;
+    outline-offset: 4px !important;
+    box-shadow: 0 0 0 4px rgba(0,212,255,0.25) !important;
+}
+[data-testid="stSelectbox"] > div > div:focus-within,
+[data-testid="stMultiSelect"] > div > div:focus-within {
+    border-color: #00d4ff !important;
+    box-shadow: 0 0 0 2px rgba(0,212,255,0.25) !important;
+}
+[data-testid="stTextInput"] > div > div:focus-within,
+[data-testid="stTextArea"] > div:focus-within {
+    border-color: #00d4ff !important;
+    box-shadow: 0 0 0 2px rgba(0,212,255,0.25) !important;
+}
+[data-testid="stChatInput"] > div:focus-within {
+    border-color: #00d4ff !important;
+    box-shadow: 0 0 0 2px rgba(0,212,255,0.25) !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -238,6 +276,7 @@ def page_header(title: str, subtitle: str = "", icon: str = "") -> None:
   <h1 style="
       font-family:'Space Grotesk',sans-serif;
       font-size:2rem;font-weight:700;margin:0;
+      color:#e2e8f0;
       background:linear-gradient(135deg,#00d4ff,#8b5cf6);
       -webkit-background-clip:text;-webkit-text-fill-color:transparent;
       background-clip:text;">
@@ -267,7 +306,7 @@ def metric_card(
     border:1px solid #2d3748;border-top:2px solid {color};
     border-radius:14px;padding:1.1rem 1.3rem;
     transition:transform 0.2s,box-shadow 0.2s;">
-  <div style="font-size:0.73rem;color:#94a3b8;text-transform:uppercase;
+  <div style="font-size:0.73rem;color:#b0bec5;text-transform:uppercase;
               letter-spacing:0.07em;font-weight:500;margin-bottom:0.35rem;">
     {icon}&nbsp;{title}
   </div>
@@ -333,14 +372,17 @@ def zone_density_bar(zone_name: str, density_pct: float, occupancy: int, capacit
   <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:0.55rem;">
     {zone_name}
   </div>
-  <div style="background:#0a0e1a;border-radius:99px;height:5px;margin-bottom:0.55rem;">
+  <div style="background:#0a0e1a;border-radius:99px;height:5px;margin-bottom:0.55rem;"
+       role="progressbar"
+       aria-label="{zone_name} crowd density: {density_pct:.0f}%"
+       aria-valuenow="{density_pct:.0f}" aria-valuemin="0" aria-valuemax="100">
     <div style="width:{min(density_pct,100)}%;background:{color};height:5px;
-                border-radius:99px;transition:width 0.5s;"></div>
+                border-radius:99px;transition:width 0.5s;" aria-hidden="true"></div>
   </div>
   <div style="display:flex;justify-content:space-between;align-items:center;">
     <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;
                 color:{color};font-size:1.25rem;">{density_pct}%</div>
-    <div style="font-size:0.7rem;color:#94a3b8;">{occupancy:,} / {capacity:,}</div>
+    <div style="font-size:0.7rem;color:#b0bec5;">{occupancy:,} / {capacity:,}</div>
   </div>
   <div style="margin-top:0.45rem;">{alert_badge(alert_level)}</div>
 </div>""", unsafe_allow_html=True)
@@ -365,10 +407,11 @@ def sidebar_brand() -> None:
 <div style="text-align:center;padding:1rem 0 1.2rem;">
   <div style="font-size:2.6rem;">🏟️</div>
   <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;
+              color:#00d4ff;
               background:linear-gradient(135deg,#00d4ff,#8b5cf6);
               -webkit-background-clip:text;-webkit-text-fill-color:transparent;
               background-clip:text;">Smart Stadium AI</div>
-  <div style="font-size:0.68rem;color:#94a3b8;margin-top:2px;">
+  <div style="font-size:0.68rem;color:#b0bec5;margin-top:2px;">
       Powered by Groq · Llama 3
   </div>
   <hr style="border-color:#2d3748;margin-top:0.9rem;">
