@@ -58,7 +58,7 @@ for icon, name, desc in nav_items:
 
 st.sidebar.markdown("---")
 st.sidebar.markdown(
-    "<div style='font-size:0.72rem;color:#64748b;text-align:center;'>"
+    "<div style='font-size:0.72rem;color:#94a3b8;text-align:center;'>"
     "Smart Stadium AI Assistant<br>Hackathon Edition · Groq Llama 3</div>",
     unsafe_allow_html=True,
 )
@@ -84,6 +84,7 @@ st.markdown("""
     <h1 style="
         font-family: 'Space Grotesk', sans-serif;
         font-size: 2.6rem; font-weight: 800; margin: 0 0 0.4rem;
+        color: #e2e8f0;
         background: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 50%, #f59e0b 100%);
         -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         background-clip: text; position: relative;
@@ -212,7 +213,7 @@ with col_chart:
         height=350,
         margin=dict(l=5, r=15, t=10, b=10),
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
 st.markdown("---")
 
@@ -260,3 +261,4 @@ info_card(
     "All analytics and navigation work <b>without</b> an API key.",
     "⚡", "#00d4ff",
 )
+
