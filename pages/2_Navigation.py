@@ -200,7 +200,7 @@ fig.update_layout(legend=dict(
     bgcolor="#1a1f35", bordercolor="#2d3748",
     orientation="h", yanchor="bottom", y=1.01, xanchor="right", x=1,
 ))
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
 # ── Legend ─────────────────────────────────────────────────────────────────────
 st.markdown("**Node Types**")
@@ -220,4 +220,5 @@ info_card(
     "the route is computed in milliseconds entirely on the server.",
     "ℹ️", "#8b5cf6",
 )
+
 
