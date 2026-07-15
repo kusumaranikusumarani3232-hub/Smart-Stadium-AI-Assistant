@@ -160,6 +160,23 @@ details[data-testid="stExpander"] {
     background: #141929 !important;
 }
 
+/* ─── Chat input ────────────────────────────────────────────── */
+[data-testid="stChatInput"] {
+    background-color: transparent !important;
+}
+[data-testid="stChatInput"] > div {
+    background-color: #1a1f35 !important;
+    border: 1px solid #2d3748 !important;
+    border-radius: 10px !important;
+}
+[data-testid="stChatInput"] textarea {
+    background-color: transparent !important;
+    color: #e2e8f0 !important;
+}
+[data-testid="stChatInput"] textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
 /* ─── Tabs ──────────────────────────────────────────────────── */
 button[data-baseweb="tab"] {
     color: #b0bec5 !important;  /* contrast fix: #94a3b8 → #b0bec5 (~4.6:1) */
@@ -361,4 +378,3 @@ def plotly_dark_layout(fig, title: str = "", height: int = 400) -> None:
         height=height,
         margin=dict(l=10, r=15, t=45 if title else 15, b=15),
     )
-
