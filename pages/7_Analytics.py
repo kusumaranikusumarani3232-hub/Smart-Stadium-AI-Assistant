@@ -92,7 +92,7 @@ with tab1:
         fig_ts.add_hline(y=75, line_dash="dot", line_color="#f59e0b")
         fig_ts.add_hline(y=90, line_dash="dot", line_color="#dc2626")
         plotly_dark_layout(fig_ts, "Crowd Density Over Time", height=360)
-        st.plotly_chart(fig_ts, use_container_width=True)
+        st.plotly_chart(fig_ts, use_container_width=True, config={"displayModeBar": False})
 
     with c2:
         # Hourly average density (heatmap style)
@@ -108,7 +108,7 @@ with tab1:
             hovertemplate="Zone: %{y}<br>Hour: %{x}<br>Avg Density: %{z:.1f}%<extra></extra>",
         ))
         plotly_dark_layout(fig_hm, "Avg Density by Zone × Hour", height=360)
-        st.plotly_chart(fig_hm, use_container_width=True)
+        st.plotly_chart(fig_hm, use_container_width=True, config={"displayModeBar": False})
 
     # Alert level distribution over time
     alert_counts = filtered_crowd.groupby(
@@ -127,7 +127,7 @@ with tab1:
         barmode="stack",
     )
     plotly_dark_layout(fig_alert, "Alert Level Distribution by Day", height=320)
-    st.plotly_chart(fig_alert, use_container_width=True)
+    st.plotly_chart(fig_alert, use_container_width=True, config={"displayModeBar": False})
 
 # ── Tab 2: Incidents ───────────────────────────────────────────────────────────
 with tab2:
@@ -143,7 +143,7 @@ with tab2:
         )
         fig_types.update_traces(textposition="outside", textfont_color="#e2e8f0")
         plotly_dark_layout(fig_types, "Incidents by Type", height=360)
-        st.plotly_chart(fig_types, use_container_width=True)
+        st.plotly_chart(fig_types, use_container_width=True, config={"displayModeBar": False})
 
     with c2:
         # Severity distribution (donut)
@@ -154,7 +154,7 @@ with tab2:
             color="severity", color_discrete_map=SEV_COLORS, hole=0.55,
         )
         plotly_dark_layout(fig_sev, "Incident Severity Distribution", height=360)
-        st.plotly_chart(fig_sev, use_container_width=True)
+        st.plotly_chart(fig_sev, use_container_width=True, config={"displayModeBar": False})
 
     # Incidents by zone
     zone_inc = inc_df.groupby("zone_name").size().reset_index(name="count").sort_values("count", ascending=False)
@@ -165,7 +165,7 @@ with tab2:
     )
     fig_zone_inc.update_traces(textposition="outside", textfont_color="#e2e8f0")
     plotly_dark_layout(fig_zone_inc, "Incidents by Zone", height=300)
-    st.plotly_chart(fig_zone_inc, use_container_width=True)
+    st.plotly_chart(fig_zone_inc, use_container_width=True, config={"displayModeBar": False})
 
 # ── Tab 3: Volunteers ──────────────────────────────────────────────────────────
 with tab3:
@@ -180,7 +180,7 @@ with tab3:
         )
         fig_roles.update_traces(textposition="outside", textfont_color="#e2e8f0")
         plotly_dark_layout(fig_roles, "Volunteers by Role", height=340)
-        st.plotly_chart(fig_roles, use_container_width=True)
+        st.plotly_chart(fig_roles, use_container_width=True, config={"displayModeBar": False})
 
     with c2:
         zone_counts = vol_df.groupby("zone").size().reset_index(name="count")
@@ -190,7 +190,7 @@ with tab3:
             color_discrete_sequence=px.colors.sequential.Plasma_r,
         )
         plotly_dark_layout(fig_zones_v, "Volunteer Zone Distribution", height=340)
-        st.plotly_chart(fig_zones_v, use_container_width=True)
+        st.plotly_chart(fig_zones_v, use_container_width=True, config={"displayModeBar": False})
 
     # Status timeline-style
     status_zone = vol_df.groupby(["zone", "status"]).size().reset_index(name="count")
@@ -205,7 +205,7 @@ with tab3:
         barmode="stack",
     )
     plotly_dark_layout(fig_sv, "Volunteer Status by Zone", height=320)
-    st.plotly_chart(fig_sv, use_container_width=True)
+    st.plotly_chart(fig_sv, use_container_width=True, config={"displayModeBar": False})
 
 # ── Tab 4: Events ──────────────────────────────────────────────────────────────
 with tab4:
@@ -223,7 +223,7 @@ with tab4:
         fig_att.update_traces(textposition="outside", textfont_color="#e2e8f0")
         fig_att.update_xaxes(tickangle=-35)
         plotly_dark_layout(fig_att, "Expected Attendance by Event", height=380)
-        st.plotly_chart(fig_att, use_container_width=True)
+        st.plotly_chart(fig_att, use_container_width=True, config={"displayModeBar": False})
 
     with c2:
         status_event = evt_df.groupby("status").size().reset_index(name="count")
@@ -234,4 +234,5 @@ with tab4:
             hole=0.55,
         )
         plotly_dark_layout(fig_estatus, "Event Status Breakdown", height=380)
-        st.plotly_chart(fig_estatus, use_container_width=True)
+        st.plotly_chart(fig_estatus, use_container_width=True, config={"displayModeBar": False})
+
